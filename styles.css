@@ -195,6 +195,7 @@ main {
     color: #1a1a1a;
     border-bottom: 2px solid #ff6600;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 /* LISTES */
@@ -202,6 +203,7 @@ main {
     list-style-type: disc;
     margin-left: 20px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .cv li {
