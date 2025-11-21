@@ -4,7 +4,6 @@ Bienvenue dans mon portfolio !
 Ce projet a été créé pour présenter mon parcours, mes compétences, mes expériences ainsi que mes projets en tant que **Développeur Web** et **Formateur informatique**.
 
 ---
-
 Objectif du projet
 
 Ce portfolio a pour but de :
