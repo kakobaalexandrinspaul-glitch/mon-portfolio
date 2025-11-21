@@ -165,11 +165,13 @@ body {
 }
 
 /* MAIN ET SECTION CV */
+
+
 main {
+    display: flex;
+    justify-content: center;     /* Centre ton CV */
     padding: 40px 20px;
-     display: flex;
-    justify-content: left;
-    
+    background: #f5f5f5;
 }
 
 .cv {
@@ -181,16 +183,15 @@ main {
     width: 100%;
     line-height: 1.6;
 }
-
 .cv h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: #ff6600;
     text-align: left;
 }
-.experiences {
+/* .experiences {
     text-align: left;
-}
+} */
 
 /* TITRES DE SECTIONS */
 .cv h2 {
@@ -202,6 +203,16 @@ main {
     padding-bottom: 5px;
     text-align: center;
 }
+/* .competance {
+    text-align: left;
+} */
+
+
+.li{
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
 
 /* LISTES */
 .cv ul {
@@ -216,6 +227,7 @@ main {
     font-size: 1rem;
         text-align: left;
     }
+
     
 
 /* RESPONSIVE */
