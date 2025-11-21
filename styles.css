@@ -167,8 +167,9 @@ body {
 /* MAIN ET SECTION CV */
 main {
     padding: 40px 20px;
-    display: flex;
-    justify-content: center;
+     display: flex;
+    justify-content: left;
+    
 }
 
 .cv {
@@ -178,13 +179,17 @@ main {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     max-width: 900px;
     width: 100%;
+    line-height: 1.6;
 }
 
 .cv h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: #ff6600;
-    text-align: center;
+    text-align: left;
+}
+.experiences {
+    text-align: left;
 }
 
 /* TITRES DE SECTIONS */
@@ -203,16 +208,20 @@ main {
     list-style-type: disc;
     margin-left: 20px;
     margin-bottom: 20px;
-    justify-content: center;
+    justify-content: left;
 }
 
 .cv li {
     margin-bottom: 10px;
     font-size: 1rem;
-}
+        text-align: left;
+    }
+    
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    
+    
     .cv {
         padding: 30px 20px;
     }
@@ -227,6 +236,7 @@ main {
 
     .cv li {
         font-size: 0.95rem;
+        text-align: left;
     }
 }
 /* ==========================
