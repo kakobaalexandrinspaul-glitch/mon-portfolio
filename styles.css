@@ -169,102 +169,92 @@ body {
 
 main {
     display: flex;
-    justify-content: center;     /* Centre ton CV */
+    justify-content: center;
     padding: 40px 20px;
     background: #f5f5f5;
 }
 
 .cv {
-    background-color: #fff;
+    width: 100%;
+    max-width: 1100px;
+    background: #fff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    max-width: 900px;
-    width: 100%;
-    line-height: 1.6;
-}
-.cv h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #ff6600;
-    text-align: left;
-}
-/* .experiences {
-    text-align: left;
-} */
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
 
-/* TITRES DE SECTIONS */
-.cv h2 {
-    font-size: 1.8rem;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-    border-bottom: 2px solid #ff6600;
-    padding-bottom: 5px;
-    text-align: center;
-}
-/* .competance {
-    text-align: left;
-} */
-
-
-.li{
-    margin-bottom: 8px;
-    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
 }
 
-
-/* LISTES */
-.cv ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    justify-content: left;
+.cv h1{
+    grid-column:1/3;
+    text-align:center;
+    color:#ff6600;
+    font-size:2.5rem;
 }
 
-.cv li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-        text-align: left;
-    }
+.education{
+    grid-column:1/3;
+}
 
+.experiences{
+    grid-column:1/3;
+}
+
+.competences{
+    grid-column:1/3;
+}
+
+.centres d'intérêt{
+
+}
+
+.langues{
     
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    
-    
-    .cv {
-        padding: 30px 20px;
-    }
-
-    .cv h1 {
-        font-size: 2rem;
-    }
-
-    .cv h2 {
-        font-size: 1.5rem;
-    }
-
-    .cv li {
-        font-size: 0.95rem;
-        text-align: left;
-    }
-}
-/* ==========================
-   RESET ET BASE
-========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+.cv h2{
+    font-size:1.8rem;
+    color:#222;
+    border-bottom:2px solid #ff6600;
+    padding-bottom:8px;
+    margin-bottom:20px;
+}
+
+.cv ul{
+    padding-left:20px;
+}
+
+.cv li{
+    margin-bottom:12px;
+    line-height:1.8;
+    font-size:1rem;
+}
+
+@media (max-width:768px){
+
+    .cv{
+        grid-template-columns:1fr;
+        padding:25px;
+    }
+
+    .cv h1,
+    .education,
+    .experiences,
+    .competences,
+    .centres,
+    .langues{
+        grid-column:1;
+    }
+
+    .cv h1{
+        font-size:2rem;
+    }
+
+    .cv h2{
+        font-size:1.5rem;
+    }
 }
 
 /* ==========================
@@ -588,4 +578,257 @@ body {
     .education {
         background-color: black;
 }
+}
+/* ==========================================
+   GRANDES TABLETTES ET PETITS PC
+========================================== */
+@media screen and (max-width: 1024px) {
+
+    header,
+    .header {
+        padding: 20px;
+    }
+
+    section {
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .cv {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .contacts .container {
+        flex-direction: column;
+    }
+
+    .projet-card {
+        flex-direction: column;
+    }
+
+    .projet-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 25px;
+    }
+}
+
+/* ==========================================
+   TABLETTES
+========================================== */
+@media screen and (max-width: 768px) {
+
+    header,
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header nav,
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    header nav a {
+        margin-left: 0;
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section h3 {
+        font-size: 1.3rem;
+    }
+
+    .cv {
+        display: block;
+        padding: 25px;
+    }
+
+    .cv h1 {
+        font-size: 2rem;
+    }
+
+    .cv h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+    }
+
+    .projet-content {
+        padding: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-copy {
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   SMARTPHONES
+========================================== */
+@media screen and (max-width: 576px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header,
+    .header {
+        padding: 15px;
+    }
+
+    header h2,
+    .logo a {
+        font-size: 1.4rem;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
+
+    section h1 {
+        font-size: 1.8rem;
+    }
+
+    section h3 {
+        font-size: 1.2rem;
+    }
+
+    section p {
+        font-size: .95rem;
+    }
+
+    section img {
+        max-width: 230px;
+    }
+
+    section div div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    section div div a {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .cv {
+        padding: 20px;
+    }
+
+    .cv h1 {
+        font-size: 1.8rem;
+    }
+
+    .cv h2 {
+        font-size: 1.3rem;
+    }
+
+    .cv li {
+        font-size: .95rem;
+    }
+
+    .contact-info h1 {
+        font-size: 1.7rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .projets h1 {
+        font-size: 2rem;
+    }
+
+    .projet-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .projet-content p {
+        font-size: .95rem;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer div {
+        width: 100%;
+    }
+
+    .footer-social .socials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* ==========================================
+   TRES PETITS ECRANS
+========================================== */
+@media screen and (max-width: 360px) {
+
+    header h2,
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    section h1,
+    .cv h1,
+    .projets h1 {
+        font-size: 1.5rem;
+    }
+
+    section img {
+        max-width: 180px;
+    }
+
+    .cv {
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: .9rem;
+    }
 }
